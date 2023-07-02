@@ -1,0 +1,42 @@
+
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+
+git init
+
+echo "# My New Repository" >> README.md
+
+
+git add README.md
+
+
+git commit -m "Initial commit"
+
+curl -u 'YOUR_USERNAME' https://api.github.com/user/repos -d '{"name":"YOUR_REPO_NAME"}'
+
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git push -u origin master
+
+git clone <repository_url>
+git add <file1> <file2> ...         # Stage the changes you want to upload
+git commit -m "Commit message"      # Commit the staged changes with a descriptive message
+git push <remote> <branch>          # Push the committed changes to the remote repository
+
+git pull <remote> <branch>
+git branch
+git checkout <branch_name>
+git merge <branch_name>
+git status
+git log
+git remote add <name> <repository_url>  # Add a remote repository
+git remote -v                          # List remote repositories
+git branch -d <branch_name>
+git stash
+git stash pop
+git checkout -b <new_branch_name>
+git reset <file>                 # Unstage a file
+git reset --hard HEAD            # Discard all changes
+git reset --hard <commit>        # Move HEAD and reset to a commit
+git rm <file>
+git cherry-pick <commit1> <commit2>
